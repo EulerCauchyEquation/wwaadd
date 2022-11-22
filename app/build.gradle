@@ -23,8 +23,7 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField("String", "serverKey", properties.getProperty("custom_api_key"))
-        buildConfigField "String", "CUSTOM_API_KEY", properties["custom_api_key"]
+        buildConfigField "String", "CUSTOM_API_KEY", '"abcdefghhifd'
     }
 
     buildTypes {
