@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/wadiz_all">
+
+    <fragment
+        android:id="@+id/wadiz_all"
+        android:name="com.test.wadiz.activity.AllFragment"
+        tools:layout="@layout/fragment_all" />
+
+    <fragment
+        android:id="@+id/wadiz_funding"
+        android:name="com.test.wadiz.activity.AllFragment"
+        tools:layout="@layout/fragment_funding" />
+
+    <fragment
+        android:id="@+id/wadiz_store"
+        android:name="com.test.wadiz.activity.AllFragment"
+        tools:layout="@layout/fragment_store" />
+</navigation>

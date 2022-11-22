@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="5dp">
+
+    <!-- 프로젝트 이미지 -->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_photo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="8dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/darker_gray"
+        android:clickable="true"
+        android:foreground="@drawable/ripple_rect"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/barrier_image_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 프로젝트 제목 -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lineSpacingExtra="-4dp"
+        android:maxLines="2"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tv_category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/barrier_image_right"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="길냥이 지지와 지지 친구들의 지지대(JiJiDAE)가 되어주세요." />
+
+    <!-- 카테고리 -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@android:color/black"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_additional_info"
+        app:layout_constraintStart_toStartOf="@id/barrier_image_right"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        tools:text="펀딩" />
+
+    <!-- 추가 정보 -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_additional_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_price"
+        app:layout_constraintStart_toStartOf="@id/barrier_image_right"
+        app:layout_constraintTop_toBottomOf="@id/tv_category"
+        tools:text="\@고양이 @냥냥 #반려동물" />
+
+    <!-- 가격 -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/colorSecondaryVariant"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/barrier_image_right"
+        app:layout_constraintTop_toBottomOf="@id/tv_additional_info"
+        tools:text="39,000" />
+
+    <!-- 가격 단위 -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="원"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_price"
+        app:layout_constraintStart_toEndOf="@id/tv_price"
+        app:layout_constraintTop_toBottomOf="@id/tv_additional_info"
+        tools:text="원" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_image_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="iv_photo" />
+</androidx.constraintlayout.widget.ConstraintLayout>

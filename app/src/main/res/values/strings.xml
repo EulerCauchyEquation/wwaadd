@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Wadiz</string>
+    <string name="keyword_hint">어떤 프로젝트를 찾고 계신가요?</string>
+    <string name="tab_all">전체</string>
+    <string name="tab_funding">펀딩</string>
+    <string name="tab_store">스토어</string>
+</resources>
